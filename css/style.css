@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+body {
+  background-color: #f0f0f0;
+}
+
+header {
+  background-color: #bcac9b;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.menu {
+  text-align: right;
+  margin: auto 0;
+}
+.menu ul li {
+  display: inline-block;
+  display: inline-block;
+  margin-left: 25px;
+  margin-top: 20px;
+}
+
+.menu ul li a {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+}
+.menu ul li a:hover {
+  text-decoration: none;
+}
+
+/* Secao slide de fotos*/
+.slide-geral {
+  margin-top: 113px;
+}
+
+/* Missão */
+.missao {
+  align-items: center;
+}
+.missao .subtitulo {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  margin-top: 1.2rem;
+}
+
+.missao .subtitulo::after {
+  background: #000;
+  content: "";
+  display: block;
+  height: 3px;
+  margin: 8px auto;
+  width: 95px;
+}
+.missao p {
+  text-align: center;
+  font-size: 0.95rem;
+  margin-top: 1rem;
+}
