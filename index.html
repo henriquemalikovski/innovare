@@ -5,31 +5,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Innovare</title>
-  <link rel="stylesheet" href="css/bootstrap-reboot.css">
-  <link rel="stylesheet" href="css/bootstrap-grid.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/grid.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <!-- Header e Menu-->
   <header>
-    <div class="container">
-      <div class="row">
-        <div class="col-4">
-          <a href="" class="logo">
-            <img src="img/INNOVARE ODONTO-02- branco.png" alt="">
-          </a>
-        </div>
-        <div class="col-8 menu">
-          <nav>
-            <ul>
-              <li><a href="">Sobre</a></li>
-              <li><a href="">Clinica</a></li>
-              <li><a href="">Equipe</a></li>
-              <li><a href="">Contato</a></li>
-            </ul>
-          </nav>
-        </div>
+    <div class="container header">
+      <div class="grid-7">
+        <a href="" class="logo">
+          <img src="img/INNOVARE ODONTO-02- branco.png" alt="">
+        </a>
+      </div>
+      <div class="grid-9 menu">
+        <nav>
+          <ul>
+            <li><a href="">Sobre</a></li>
+            <li><a href="">Clinica</a></li>
+            <li><a href="">Equipe</a></li>
+            <li><a href="">Contato</a></li>
+          </ul>
+        </nav>
       </div>
     </div>
   </header>
@@ -41,21 +40,38 @@
 
 
   <!-- Missão -->
-  <section class="container">
-    <div class="row justify-content-center missao">
+  <section class="container missao">
+    <h2 class="subtitulo">Nossa Missão com Você</h2>
+    <p class="sup">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis pellentesque dolor magna nulla urna gravida hendrerit pellentesque. Rhoncus odio bibendum et cras blandit. Mi viverra diam enim, platea adipiscing quam enim volutpat blandit. Eu, suscipit dolor, elit metus id sit in purus. Amet mattis suspendisse libero elit. Ut id eget id non rhoncus, ipsum, laoreet. Elit nisl in viverra integer pharetra viverra in. Sit malesuada adipiscing pellentesque nunc viverra etiam ut velit. Fermentum scelerisque justo fermentum sagittis, eu, faucibus sit quis dictum. Nunc aenean aliquet nam massa. Mattis diam lectus viverra ultricies quis amet, nunc orci neque.
+      Vitae est enim ut vitae est. Penatibus quam diam non volutpat amet, sapien risus porttitor mollis. Sed purus pellentesque commodo, proin rhoncus maecenas vivamus. Facilisi pellentesque elit lacus nunc, sed orci turpis vel, duis. Erat consectetur urna aliquet justo eu nec ac tempor. Convallis elit semper elementum nec senectus lacus sit pellentesque. Sit at nunc, viverra lectus tellus a. Aliquet at.</p>
 
-      <div class="col-10">
-        <h2 class="subtitulo">Nossa Missão com Você</h2>
-        <p class="sup">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis pellentesque dolor magna nulla urna gravida hendrerit pellentesque. Rhoncus odio bibendum et cras blandit. Mi viverra diam enim, platea adipiscing quam enim volutpat blandit. Eu, suscipit dolor, elit metus id sit in purus. Amet mattis suspendisse libero elit. Ut id eget id non rhoncus, ipsum, laoreet. Elit nisl in viverra integer pharetra viverra in. Sit malesuada adipiscing pellentesque nunc viverra etiam ut velit. Fermentum scelerisque justo fermentum sagittis, eu, faucibus sit quis dictum. Nunc aenean aliquet nam massa. Mattis diam lectus viverra ultricies quis amet, nunc orci neque.
-          Vitae est enim ut vitae est. Penatibus quam diam non volutpat amet, sapien risus porttitor mollis. Sed purus pellentesque commodo, proin rhoncus maecenas vivamus. Facilisi pellentesque elit lacus nunc, sed orci turpis vel, duis. Erat consectetur urna aliquet justo eu nec ac tempor. Convallis elit semper elementum nec senectus lacus sit pellentesque. Sit at nunc, viverra lectus tellus a. Aliquet at.</p>
+    <button>Entre em contato</button>
+  </section>
 
-        <div class="row justify-content-center">
-          <button>Entre em contato</button>
-        </div>
+  <!-- Seção do Vídeo sobre a clinica -->
+  <section class="se-video">
+    <div class="container">
+      <h2 class="subtitulo white">Conheça um pouco mais sobre a gente</h2>
+      <div class="grid-16 video">
+        <iframe width="800" height="450" src="https://www.youtube.com/embed/fSLLtlQO9Ps" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
   </section>
 
+  <!-- Seção Serviços-->
+  <section class="servicos">
+    <div class="container">
+      <div class="row justify-content-center">
+        <h2 class="col-12 subtitulo">Conheça os nossos serviços</h2>
+        <div class="col-3 card">
+          <figure>
+            <img src="img/pexels-sound-on-3760942.jpg" alt="">
+          </figure>
+          <p>teste</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
 </body>
 
