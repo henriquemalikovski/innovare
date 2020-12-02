@@ -3,6 +3,7 @@
 * {
   padding: 0;
   margin: 0;
+  text-align: center;
 }
 
 img {
@@ -200,4 +201,47 @@ button:focus {
   font-weight: bold;
   text-align: center;
   float: right;
+}
+.pessoas {
+  text-align: center;
+}
+.pessoas-lista {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.pessoa-foto {
+  border-radius: 50px;
+  margin: 0 auto;
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.pessoa-foto img {
+  border-radius: inherit;
+}
+
+.pessoas-lista li h3 {
+  color: #000;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  line-height: 25px;
+  padding-top: 15px;
+  text-transform: uppercase;
+}
+
+.pessoas-lista li p {
+  padding: 10px 20px 20px 20px;
+  margin-bottom: 30px;
+}
+
+.pessoas button {
+  margin-bottom: 40px;
+}
+
+/*whatsapp*/
+.whats {
+  background-color: #2a3d45;
 }
