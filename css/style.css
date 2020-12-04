@@ -53,6 +53,7 @@ header img {
 .menu ul li a {
   color: #fff;
   font-family: "Roboto", sans-serif;
+  font-weight: 700;
 }
 .menu ul li a:hover {
   text-decoration: none;
@@ -99,7 +100,7 @@ button:focus {
   font-size: 1.5rem;
   font-weight: 700;
   text-align: center;
-  margin-top: 1.2rem;
+  margin-top: 30px;
 }
 
 .subtitulo::after {
@@ -201,13 +202,14 @@ button:focus {
   font-weight: bold;
   text-align: center;
   float: right;
+  padding-bottom: 30px;
 }
 .pessoas {
   text-align: center;
 }
 .pessoas-lista {
   text-align: center;
-  margin: 0 auto;
+  margin: 40px auto 0 auto;
 }
 
 .pessoa-foto {
@@ -242,6 +244,112 @@ button:focus {
 }
 
 /*whatsapp*/
+.div-whats {
+  display: flex;
+  justify-content: center;
+}
+
 .whats {
   background-color: #2a3d45;
+  border-radius: 4px;
+  color: #fff;
+  margin: 20px 0;
+  padding-bottom: 30px;
+}
+
+.whats h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  padding-top: 20px;
+}
+
+.whats p {
+  font-size: 18px;
+  padding: 20px 30px;
+}
+
+.whats button {
+  background-color: #c17c74;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+
+/*Footer*/
+.footer {
+  background: #bcac9b;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  padding: 20px 0;
+  width: 100%;
+}
+.footer p,
+.footer ul li {
+  text-align: left !important;
+}
+
+.footer h3 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  line-height: 25px;
+  text-align: left !important;
+
+  text-transform: uppercase;
+}
+.footer h3::after {
+  background: #fff;
+  content: "";
+  display: block;
+  height: 3px;
+  margin: 6px 0 12px 0;
+  width: 60px;
+}
+
+.footer-historia {
+  padding-right: 40px;
+}
+
+.footer-contato ul li {
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.footer-redes ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.footer-redes ul li a {
+  border: 3px solid #fff;
+  border-radius: 5px;
+  display: block;
+  padding: 10px;
+}
+
+.footer-redes ul li a:hover {
+  border-color: #2a3d45;
+}
+.footer-redes ul {
+  text-align: left;
+}
+.icone-redes {
+  width: 32px;
+  height: 32px;
+  margin: 0 auto;
+}
+.footer-redes ul li a path {
+  fill: #2a3d45 !important;
+}
+.copy {
+  background: #7a6c5d;
+  color: #fff;
+  padding: 10px 0;
+  width: 100%;
+}
+.copy p {
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
 }
