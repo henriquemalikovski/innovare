@@ -54,6 +54,7 @@ header img {
   color: #fff;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
+  font-size: 16px;
 }
 .menu ul li a:hover {
   text-decoration: none;
@@ -81,8 +82,11 @@ button {
   border-radius: 5px;
   color: #fff;
   margin-top: 1.5rem;
-  padding: 0.5rem 0.75rem;
+  padding: 15px 20px;
   cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
 }
 button:hover {
   background-color: #293d57;
