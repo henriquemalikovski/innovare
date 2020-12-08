@@ -8,7 +8,9 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/grid.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsivel.css">
 </head>
 
 <body>
@@ -16,7 +18,7 @@
   <header>
     <div class="container header">
       <div class="grid-7">
-        <a href="" class="logo">
+        <a href="#" class="logo">
           <img src="img/INNOVARE ODONTO-02- branco.png" alt="">
         </a>
       </div>
@@ -34,8 +36,10 @@
   </header>
 
   <!-- Section Imagens em Geral-->
-  <section class="slide-geral">
-
+  <section class="slide-geral container">
+    <div class="slide">
+      <img src="img/pexels-andrea-piacquadio-3884125.jpg" alt="">
+    </div>
   </section>
 
 
@@ -53,7 +57,7 @@
     <div class="container">
       <h2 class="subtitulo white">Conheça um pouco mais sobre a gente</h2>
       <div class="grid-16 video">
-        <iframe width="800" height="450" src="https://www.youtube.com/embed/fSLLtlQO9Ps" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe class="responsive-iframe" src="https://www.youtube.com/embed/fSLLtlQO9Ps" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
   </section>
@@ -62,11 +66,28 @@
   <section id="clinica" class="servicos container">
     <h2 class="subtitulo">Conheça os nossos serviços</h2>
     <ul class="servicos-lista">
-      <li class="grid-4">
+      <li class="grid-4" data-toggle="modal" data-target="#exampleModal">
         <div class="servico-icone">
           <img src="img/pexels-andrea-piacquadio-3884125.jpg">
         </div>
         <h3>Serviço Prestado</h3>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Serviço Prestado</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                Texto sobre o serviço prestado
+              </div>
+            </div>
+          </div>
+        </div>
+
       </li>
       <li class="grid-4">
         <div class="servico-icone">
@@ -87,6 +108,7 @@
         <h3>Serviço Prestado</h3>
       </li>
     </ul>
+
     <button>Entre em contato</button>
   </section>
 
@@ -124,13 +146,7 @@
           <h3>Nome da Pessoa</h3>
           <p>Cargo da pessoa</p>
         </li>
-        <li class="grid-4">
-          <div class="pessoa-foto">
-            <img src="img/foto_pessoa.jpg" alt="">
-          </div>
-          <h3>Nome da Pessoa</h3>
-          <p>Cargo da pessoa</p>
-        </li>
+
       </ul>
     </div>
     <button>Entre em contato</button>
@@ -218,7 +234,8 @@
       </div>
     </div>
   </footer>
-
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
 </body>
 
 </html>
