@@ -1,3 +1,12 @@
+/*
+Theme Name: Innovare OnePage
+Theme URI: www.innovares.com.br
+Author: Henrique Malikovski
+Author URI: www.henriquemalikovski.com.br
+Description: Tema desenvolvido para a clinica Innovare
+Version: 1.0
+*/
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap");
 
 * {
@@ -222,6 +231,7 @@ button:focus {
   text-align: center;
 }
 .pessoas-lista {
+  display: inline-flex;
   text-align: center;
   margin: 40px auto 0 auto;
 }
@@ -372,6 +382,7 @@ button:focus {
   font-size: 12px;
 }
 
+cmb-type-oembed,
 .responsive-iframe {
   position: absolute;
   top: 0;
