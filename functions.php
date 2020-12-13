@@ -9,12 +9,16 @@ function get_field($key, $page_id = 0) {
     echo get_field($key, $page_id);
   }
 
-add_action( 'init', 'getURLEmbedYoutTube' );
-
 function getURLEmbedYoutTube($url) {
     $pos_str = strripos($url, "=")+1;
     $url_embed = substr($url, $pos_str);
     return $url_embed;
+}
+
+function getModalPost($post_name, $seq) {
+    $str = str_replace(' ', '', $post_name);
+    $temp_id =  $str . $seq; 
+    return $temp_id;
 }
 
 add_action('cmb2_admin_init', 'cmb2_fields_home');
@@ -166,8 +170,8 @@ function cmb2_fields_home() {
         'name'    => 'Texto Botão Serviços',
         'desc'    => '',
         'default' => '',
-        'id'      => 'botao_equipe',
-        'type'    => 'text_small',
+        'id'      => 'botao_servico',
+        'type'    => 'text',
     ) );
     // Fim de serviços
 

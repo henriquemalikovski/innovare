@@ -4,8 +4,9 @@
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
   <!-- Section Imagens em Geral-->
   <section class="slide-geral container">
-    <div class="slide">
+    <div class="slide" data-slide="principal">
       <img src="<?php echo get_template_directory_uri()?>/img/pexels-andrea-piacquadio-3884125.jpg" alt="">
+      <img src="<?php echo get_template_directory_uri()?>/img/pexels-evelina-zhu-5434020.jpg" alt="">
     </div>
   </section>
 
@@ -31,51 +32,41 @@
   <!-- Seção Serviços-->
   <section id="clinica" class="servicos container">
     <h2 class="subtitulo"><?php the_field('titulo_servico');?></h2>
+    <div class="container" >
     <ul class="servicos-lista">
-      <li class="grid-4" data-toggle="modal" data-target="#exampleModal">
-        <div class="servico-icone">
-          <img src="<?php echo get_template_directory_uri()?>/img/pexels-andrea-piacquadio-3884125.jpg">
-        </div>
-        <h3>Serviço Prestado</h3>
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Serviço Prestado</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                Texto sobre o serviço prestado
+    <?php 
+      $servicos = get_field('grupo_servicos');
+      $count = 0;
+      if(isset($servicos)) { 
+        foreach($servicos as $servico) {
+          $count += 1;?>
+        <li class="grid-4" data-toggle="modal" data-target="#<?php echo getModalPost($servico['servico'], $count);?>">
+          <div class="servico-icone">
+            <img src="<?php echo $servico['img_servico'];?>">
+          </div>
+          <h3><?php echo $servico['servico'];?></h3>
+          <!-- Modal -->
+          <div class="modal fade" id="<?php echo getModalPost($servico['servico'], $count);?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel"><?php echo $servico['servico']?></h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <?php echo $servico['desc_servico']?>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-
-      </li>
-      <li class="grid-4">
-        <div class="servico-icone">
-          <img src="<?php echo get_template_directory_uri()?>/img/pexels-andrea-piacquadio-3884125.jpg">
-        </div>
-        <h3>Serviço Prestado</h3>
-      </li>
-      <li class="grid-4">
-        <div class="servico-icone">
-          <img src="<?php echo get_template_directory_uri()?>/img/pexels-andrea-piacquadio-3884125.jpg">
-        </div>
-        <h3>Serviço Prestado</h3>
-      </li>
-      <li class="grid-4">
-        <div class="servico-icone">
-          <img src="<?php echo get_template_directory_uri()?>/img/pexels-andrea-piacquadio-3884125.jpg">
-        </div>
-        <h3>Serviço Prestado</h3>
-      </li>
+          <!-- modal -->
+        </li>
+      <?php } }?>
     </ul>
-
-    <button>Entre em contato</button>
+    </div>
+    <button><?php the_field('botao_servico');?></button>
   </section>
 
 
@@ -104,12 +95,16 @@
 
   <!-- Seção de Depoimentos -->
   <section class="depoimentos">
-    <div class="container">
-      <h2 class="subtitulo white">Depoimentos</h2>
-      <blockquote class="quote-clientes">
-        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec amet, erat etiam semper dui cum congue turpis augue. Eu viverra ut et nec gravida ut. Amet sit egestas morbi lobortis tellus mattis nibh augue arcu. Cursus sit amet, arcu cursus. Ridiculus facilisi ipsum non urna varius. Et mauris cursus fermentum tortor tincidunt. Eget nunc felis mauris a."</p>
-        <cite>Barbara Moss</cite>
-      </blockquote>
+    <h2 class="subtitulo white">Depoimentos</h2>
+    <div class="container" data-slide="depoimento">
+    <?php 
+      $depoimentos = get_field('grupo_depoimento');
+      if(isset($depoimentos)) { foreach($depoimentos as $depoimento) { ?>
+        <blockquote class="quote-clientes">
+          <p>"<?php echo $depoimento['depoimento'];?>"</p>
+          <cite><?php echo $depoimento['autor_depoimento'];?></cite>
+        </blockquote>
+    <?php } }?>
     </div>
   </section>
 

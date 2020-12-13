@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="<?php echo get_template_directory_uri()?>/css/bootstrap.css">
   <link rel="stylesheet" href="<?php echo get_template_directory_uri()?>/style.css">
   <link rel="stylesheet" href="<?php echo get_template_directory_uri()?>/css/responsivel.css">
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri()?>/css/simple-slide.css">
 </head>
 
 <body>
@@ -33,5 +34,6 @@
         </nav>
       </div>
     </div>
+    <script>document.documentElement.classList.add("js");</script>
     <?php wp_head();?>
   </header>

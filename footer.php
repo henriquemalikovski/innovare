@@ -65,6 +65,9 @@
   </footer>
   <script type="text/javascript" src="<?php echo get_template_directory_uri()?>/js/jquery.js"></script>
   <script type="text/javascript" src="<?php echo get_template_directory_uri()?>/js/bootstrap.js"></script>
+  <script src="<?php echo get_template_directory_uri()?>/js/simple-slide.js"></script>
+  <script src="<?php echo get_template_directory_uri()?>/js/script.js"></script>
+
 
   <?php wp_footer();?>
 </body>

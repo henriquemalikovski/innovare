@@ -165,6 +165,7 @@ button:focus {
   text-align: center;
 }
 .servicos-lista {
+  display: inline-flex;
   padding-top: 15px;
 }
 .servicos-lista li {
@@ -202,6 +203,10 @@ button:focus {
 
 .depoimentos {
   background: #355070;
+}
+
+.depoimentos h2 {
+  padding-top: 40px;
 }
 
 .quote-clientes {
