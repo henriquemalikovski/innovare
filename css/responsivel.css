@@ -1,5 +1,15 @@
 /*Estilo para tablets*/
 @media only screen and (min-width: 788px) and (max-width: 979px) {
+  .slide-geral {
+    margin-top: 85px;
+  }
+  .video {
+    width: 97%;
+  }
+  .btn-whats {
+    margin: 20px 40px;
+    font-size: 14px;
+  }
 }
 /*Estilo para smartphone*/
 @media only screen and (max-width: 787px) {
@@ -26,5 +36,8 @@
   }
   .slide-geral {
     margin-top: 180px;
+  }
+  .servicos-lista, .pessoas-lista {
+    display: block;
   }
 }

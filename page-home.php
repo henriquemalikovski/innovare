@@ -15,8 +15,11 @@
   <section id="sobre" class="container missao">
     <h2 class="subtitulo"><?php the_field('titulo_missao');?></h2>
     <p class="sup"><?php the_field('texto_m_v_v');?></p>
-
-    <button><?php the_field('botao_missao');?></button>
+    <div class="container btn-container">
+      <div class="col-16">
+        <a class="botao" target="_blank"><?php the_field('botao_missao');?></a>
+      </div>
+    </div>
   </section>
 
   <!-- Seção do Vídeo sobre a clinica -->
@@ -51,9 +54,9 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <h5 class="modal-title" id="exampleModalLabel"><?php echo $servico['servico']?></h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <a type="button" class="close botao" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
-                  </button>
+                  </a>
                 </div>
                 <div class="modal-body">
                   <?php echo $servico['desc_servico']?>
@@ -66,7 +69,11 @@
       <?php } }?>
     </ul>
     </div>
-    <button><?php the_field('botao_servico');?></button>
+    <div class="container btn-container">
+      <div class="col-16">
+        <a class="botao" target="_blank"><?php the_field('botao_servico');?></a>
+      </div>
+    </div>
   </section>
 
 
@@ -90,12 +97,12 @@
           <?php } }?>
       </ul>
     </div>
-    <button><?php the_field('botao_equipe');?></button>
+    <a class="botao" target="_blank"><?php the_field('botao_equipe');?></a>
   </section>
 
   <!-- Seção de Depoimentos -->
   <section class="depoimentos">
-    <h2 class="subtitulo white">Depoimentos</h2>
+    <h2 class="subtitulo white"><?php the_field('titulo_depoimento');?></h2>
     <div class="container" data-slide="depoimento">
     <?php 
       $depoimentos = get_field('grupo_depoimento');
@@ -113,7 +120,11 @@
     <div class="whats grid-7">
       <h3><?php the_field('titulo_box_whatsapp');?></h3>
       <p><?php the_field('texto_box_whatsapp');?></p>
-      <button><?php the_field('texto_botao_whatsapp');?></button>
+     
+        <div class="btn-whats">
+          <a class="botao" href="<?php echo getWhatsAppURL();?>" target="_blank"><?php the_field('texto_botao_whatsapp');?></a>
+        </div>
+      
     </div>
   </section>
   <?php endwhile; endif; ?>

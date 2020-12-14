@@ -21,6 +21,30 @@ function getModalPost($post_name, $seq) {
     return $temp_id;
 }
 
+function getInfoContato($groupID, $campoID) {
+    $campos = get_field($groupID);
+    $return = "";
+    $count = 0;
+    $qtdReg = count($campos);
+    if(isset($campos)) { 
+        foreach($campos as $campo) {
+            $count += 1;
+            $return .= $campo[$campoID];
+            if($count !== $qtdReg) {
+                $return .= " | ";
+            }
+        } 
+    }
+    return $return;
+}
+
+function getWhatsAppURL(){
+    $numero = get_field('btn_whatsapp');
+    $msg = get_field('msg_whatsapp');
+    $url = 'https://api.whatsapp.com/send?phone='.$numero.'&text='.$msg;
+    return $url;
+}
+
 add_action('cmb2_admin_init', 'cmb2_fields_home');
 
 // array('item1', 'item2') === ['item1', 'item2']
@@ -256,8 +280,6 @@ function cmb2_fields_home() {
     // Titulo Depoimento
     $cmb->add_field( array(
         'name'    => 'Titulo Depoimento',
-        'desc'    => '',
-        'default' => '',
         'id'      => 'titulo_depoimento',
         'type'    => 'text',
     ) );
@@ -371,17 +393,15 @@ function cmb2_fields_home() {
     // Informações de Contato
     // Grupo para Reunir as Informações dos Contatos
     $group_field_id = $cmb->add_field( array(
-        'id'          => 'grupo_contato',
+        'id'          => 'grupo_fone',
         'type'        => 'group',
-        'description' => 'Contatos da Clinica',
+        'description' => 'Telefones da Clínica da Clinica',
         // 'repeatable'  => false, // use false if you want non-repeatable group
         'options'     => array(
-            'group_title'       => __( 'Contato {#}', 'cmb2' ), // since version 1.1.4, {#} gets replaced by row number
-            'add_button'        => 'Adicionar Contato',
-            'remove_button'     => 'Remover Contato',
+            'group_title'       => 'Telefone {#}', // since version 1.1.4, {#} gets replaced by row number
+            'add_button'        => 'Adicionar Telefone',
+            'remove_button'     => 'Remover Telefone',
             'sortable'          => true,
-            // 'closed'         => true, // true to have the groups closed by default
-            // 'remove_confirm' => esc_html__( 'Are you sure you want to remove?', 'cmb2' ), // Performs confirmation before removing group.
         ),
     ) );
 
@@ -390,6 +410,22 @@ function cmb2_fields_home() {
         'id'   => 'telefone',
         'type' => 'text',
     ) );
+    
+    
+    $group_field_id = $cmb->add_field( array(
+        'id'          => 'grupo_email',
+        'type'        => 'group',
+        'description' => 'E-mails da Clínica',
+        // 'repeatable'  => false, // use false if you want non-repeatable group
+        'options'     => array(
+            'group_title'       => 'E-mail {#}', // since version 1.1.4, {#} gets replaced by row number
+            'add_button'        => 'Adicionar E-mail',
+            'remove_button'     => 'Remover E-mail',
+            'sortable'          => true,
+        ),
+    ) );
+    
+    
     $cmb->add_group_field( $group_field_id, array(
         'name' => 'E-mail',
         'id'   => 'email',
@@ -401,7 +437,34 @@ function cmb2_fields_home() {
     $cmb->add_field( array(
         'name' => 'Endereço da Clinica',
         'id'   => 'endereco',
-        'type' => 'text_medium',
+        'type' => 'text',
     ) );
+
+  // Informações do Botão de WhatsApp
+    $cmb = new_cmb2_box([
+        'id' => 'btn_whatsapp', // id deve ser único
+        'title' => 'Botão de WhatsApp',
+        'object_types' => ['page'], // tipo de post
+        'show_on' => [
+          'key' => 'page-template',
+          'value' => 'page-home.php',
+        ], // modelo de página
+      ]);
+
+      // Numero
+    $cmb->add_field( array(
+        'name' => 'Numero WhatsApp da Clinica',
+        'desc' => 'Inclua o numero com +55 DDD na frente',
+        'id'   => 'btn_whatsapp',
+        'type' => 'text',
+    ) );
+     // Numero
+     $cmb->add_field( array(
+        'name' => 'Mensagem WhatsApp',
+        'desc' => 'Escreva a Mensagem inicia que a pessoa irá enviar',
+        'id'   => 'msg_whatsapp',
+        'type' => 'textarea',
+    ) );
+
 }
     ?>
