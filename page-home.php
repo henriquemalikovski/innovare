@@ -5,8 +5,12 @@
   <!-- Section Imagens em Geral-->
   <section class="slide-geral container">
     <div class="slide" data-slide="principal">
-      <img src="<?php echo get_template_directory_uri()?>/img/pexels-andrea-piacquadio-3884125.jpg" alt="">
-      <img src="<?php echo get_template_directory_uri()?>/img/pexels-evelina-zhu-5434020.jpg" alt="">
+    <?php 
+      $imgs = get_field('carrossel_inicial');
+      if(isset($imgs)) { 
+        foreach($imgs as $img) {?>
+          <img src="<?php echo $img?>" alt="">
+      <?php }}?>
     </div>
   </section>
 
