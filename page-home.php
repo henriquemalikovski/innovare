@@ -21,7 +21,7 @@
     <p class="sup"><?php the_field('texto_m_v_v');?></p>
     <div class="container btn-container">
       <div class="col-16">
-        <a class="botao" target="_blank"><?php the_field('botao_missao');?></a>
+        <a class="botao" target="_blank" href="<?php echo getWhatsAppURL();?>"><?php the_field('botao_missao');?></a>
       </div>
     </div>
   </section>
@@ -75,7 +75,7 @@
     </div>
     <div class="container btn-container">
       <div class="col-16">
-        <a class="botao" target="_blank"><?php the_field('botao_servico');?></a>
+        <a class="botao" target="_blank" href="<?php echo getWhatsAppURL();?>"><?php the_field('botao_servico');?></a>
       </div>
     </div>
   </section>
@@ -101,7 +101,7 @@
           <?php } }?>
       </ul>
     </div>
-    <a class="botao" target="_blank"><?php the_field('botao_equipe');?></a>
+    <a class="botao" target="_blank" href="<?php echo getWhatsAppURL();?>"><?php the_field('botao_equipe');?></a>
   </section>
 
   <!-- Seção de Depoimentos -->

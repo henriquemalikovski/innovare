@@ -466,5 +466,31 @@ function cmb2_fields_home() {
         'type' => 'textarea',
     ) );
 
+
+    // Informações do SEO
+    $cmb = new_cmb2_box([
+        'id' => 'seo', // id deve ser único
+        'title' => 'SEO',
+        'object_types' => ['page'], // tipo de post
+        'show_on' => [
+          'key' => 'page-template',
+          'value' => 'page-home.php',
+        ], // modelo de página
+      ]);
+
+      // Numero
+    $cmb->add_field( array(
+        'name' => 'Título do Site',
+        'id'   => 'titulo_site',
+        'type' => 'text',
+    ) );
+     // Numero
+     $cmb->add_field( array(
+        'name' => 'Descrição do Site',
+        'desc' => 'Escreva aqui uma breve descrição sobre a clinica, no máximo 2 linhas',
+        'id'   => 'desc_site',
+        'type' => 'textarea',
+    ) );
+
 }
     ?>
