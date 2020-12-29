@@ -267,6 +267,8 @@ function cmb2_fields_home() {
     ) );
     // Fim de Equipe
 
+
+    //Inicio Depoimentos
     $cmb = new_cmb2_box([
       'id' => 'depoimentos', // id deve ser único
       'title' => 'Depoimentos',
@@ -276,7 +278,7 @@ function cmb2_fields_home() {
         'value' => 'page-home.php',
       ], // modelo de página
     ]);
-    //Inicio Depoimentos
+    
     // Titulo Depoimento
     $cmb->add_field( array(
         'name'    => 'Titulo Depoimento',
@@ -303,12 +305,7 @@ function cmb2_fields_home() {
     $cmb->add_group_field( $group_field_id, array(
         'name' => 'Depoimento',
         'id'   => 'depoimento',
-        'type' => 'textarea',
-    ) );
-    $cmb->add_group_field( $group_field_id, array(
-        'name' => 'Nome do Autor',
-        'id'   => 'autor_depoimento',
-        'type' => 'text',
+        'type' => 'text_url',
     ) );
     // Fim de Depoimentos
 

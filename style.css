@@ -302,7 +302,20 @@ button:focus{
 }
 
 .pessoas .botao {
+  margin-top: 2rem;
   margin-bottom: 40px;
+}
+.div-btn {
+  margin-top: 30px;
+}
+.pessoas-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.pessoa {
+  margin-top: 15px;
 }
 
 /*whatsapp*/

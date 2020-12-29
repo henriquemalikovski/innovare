@@ -84,14 +84,14 @@
   <!-- Seção de Pessoas que trabalham na Clinica -->
   <section id="equipe" class="pessoas container">
     <h2 class="subtitulo"><?php the_field('titulo_equipe');?></h2>
-    <div class="container">
-      <ul class="pessoas-lista">
+    <div lass="pessoas-lista">
+      <ul class="container pessoas-container" >
         <?php 
           $pessoas = get_field('grupo_esquipe');
           if(isset($pessoas)) { foreach($pessoas as $pessoa) { 
             $img = wp_get_attachment_image_src( $pessoa['img_pessoa_id'], 'thumbnail', true )[0];
             ?>
-            <li class="grid-4">
+            <li class="grid-5 pessoa">
               <div class="pessoa-foto">
                 <img src="<?php echo $img;?>" alt="">
               </div>
@@ -101,7 +101,9 @@
           <?php } }?>
       </ul>
     </div>
-    <a class="botao" target="_blank" href="<?php echo getWhatsAppURL();?>"><?php the_field('botao_equipe');?></a>
+    <div class="div-btn">
+      <a class="botao" target="_blank" href="<?php echo getWhatsAppURL();?>"><?php the_field('botao_equipe');?></a>
+    </div>
   </section>
 
   <!-- Seção de Depoimentos -->
@@ -110,11 +112,11 @@
     <div class="container" data-slide="depoimento">
     <?php 
       $depoimentos = get_field('grupo_depoimento');
-      if(isset($depoimentos)) { foreach($depoimentos as $depoimento) { ?>
-        <blockquote class="quote-clientes">
-          <p>"<?php echo $depoimento['depoimento'];?>"</p>
-          <cite><?php echo $depoimento['autor_depoimento'];?></cite>
-        </blockquote>
+      if(isset($depoimentos)) { 
+        foreach($depoimentos as $depoimento) { ?>
+          <div class="grid-16 video">
+            <iframe class="responsive-iframe" src="https://www.youtube.com/embed/<?php echo getURLEmbedYoutTube($depoimento['depoimento'])?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
     <?php } }?>
     </div>
   </section>
