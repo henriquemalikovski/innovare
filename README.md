@@ -1,6 +1,6 @@
 <div align="center">
     <h1 style="border: none; !important"> Projeto Innovare</h1> 
-    <img src="https://imgur.com/RTLI9CG">
+    <img src="https://i.imgur.com/RTLI9CG.png">
     <h3>Site desenvovido para a Clínica Odontológica, Estética e Preventiva Innovare</h3>
     <img src="https://img.shields.io/github/languages/top/henriquemalikovski/innovare?style=for-the-badge">
     <img src="https://img.shields.io/badge/-wordpress-21759B?logo=wordpress&logoColor=white&style=for-the-badge">
